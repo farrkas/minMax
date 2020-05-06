@@ -4,23 +4,17 @@
 
 function getMinMax(arr) {
   function sortowanko(a, b) {
-    if (a < b) return -1;
-
-    if (a > b) return 1;
-    return 0;
+        return a-b;
   }
 
   const tab = arr.sort(sortowanko);
-  console.log(tab);
+  //console.log(tab);
   const dlugosc = tab.length - 1;
-  const wynik = [];
-
-  wynik.push(tab[0]);
-  wynik.push(tab[dlugosc]);
-
-  console.log(wynik);
+  
+  console.log([tab[0], tab[dlugosc]]);
 }
 
 //getMinMax([1]); //[1,1];
 //getMinMax([1, 2]); //[1,2];
+
 getMinMax( [2,1,13,44,22,62,101,213,432,543,213,43,122,3,4,7,9,0] ); //[1,2];
